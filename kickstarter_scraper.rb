@@ -20,17 +20,11 @@ def create_project_hash
       #description: project.css("p.bbcard_blurb").text
       :description => project.css("p.bbcard_blurb").text
       #location: project.css("div.project-meta span.location-name").text
-      :location => project.css("ul.project-meta span.location-name").text 
+      :location => project.css("ul.project-meta span.location-name").text
       #percent funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
       :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
     }
   end
-  
-  #image link: project.css("div.project-thumbnail a img").attribute("src").value
-  #description: project.css("p.bbcard_blurb").text
-  #location: project.css("div.project-meta span.location-name").text
-  #percent funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
-
   projects
 end
 
